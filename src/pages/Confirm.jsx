@@ -22,11 +22,10 @@ export const Confirm = () => {
     },[token])
 
     useEffect(() => {
-       if (token){
          verifyToken()
 
-     }
-    },{verifyToken})
+     
+    },[])
 
     return (
         <div 
