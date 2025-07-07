@@ -13,10 +13,20 @@ export const Confirm = () => {
    
 
     const verifyToken=  async()=>{
-        console.log('llego')
+         try {
+            const url = `${import.meta.env.VITE_BACKEND_URL}/confirmar/${token}`
+            const respuesta = await axios.get(url)
+            toast.success(respuesta?.data?.msg)
+        } catch (error) {
+            toast.error(error?.response?.data?.msg)
+        }
     }
-    verifyToken()
 
+    useEffect(() => {
+         verifyToken()
+
+     
+    },[])
 
     return (
         <div 
