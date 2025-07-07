@@ -25,7 +25,7 @@ export const Confirm = () => {
          verifyToken()
 
      
-    },[])
+    })
 
     return (
         <div 
