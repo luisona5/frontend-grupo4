@@ -10,7 +10,7 @@ export const Confirm = () => {
 
     // CAPTUARAR EL TOKEN
     const {token}=useParams() //capturo del token
-    console.log(token)
+   
     const verifyToken= async()=>{
          try {
             const url = `${import.meta.env.VITE_BACKEND_URL}/confirmar/${token}`
@@ -23,22 +23,8 @@ export const Confirm = () => {
 
     useEffect(() => {
         verifyToken()
-    },[])
-/*
-    useEffect(() => {
-        const veryfyToken = async () => {
-            try {
-              const url = `${import.meta.env.VITE_BACKEND_URL}confirm/${token}`;
-              const respuesta = await axios.get(url);
-              toast.success(respuesta?.data?.msg);
-            } catch (error) {
-              toast.error(error?.response?.data?.msg);
-            }
-          }
-    
-      veryfyToken();
-    }, []);
-    */
+    },[ ])
+
     return (
         <div 
             className="flex flex-col items-center justify-center h-screen bg-cover bg-center bg-no-repeat "
