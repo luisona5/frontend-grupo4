@@ -11,6 +11,7 @@ export const Confirm = () => {
     // CAPTUARAR EL TOKEN
     const {token}=useParams() //capturo del token
    
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     const verifyToken=  async()=>{
          try {
             const url = `${import.meta.env.VITE_BACKEND_URL}/confirmar/${token}`
@@ -25,7 +26,7 @@ export const Confirm = () => {
          verifyToken()
 
      
-    })
+    },[verifyToken])
 
     return (
         <div 
