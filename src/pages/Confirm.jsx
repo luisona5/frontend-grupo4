@@ -13,21 +13,10 @@ export const Confirm = () => {
    
 
     const verifyToken=  async()=>{
-         try {
-            const url = `${import.meta.env.VITE_BACKEND_URL}/confirmar/${token}`
-            const respuesta = await axios.get(url)
-            toast.success(respuesta?.data?.msg)
-        } catch (error) {
-            toast.error(error?.response?.data?.msg)
-        }
+        console.log('llego')
     }
+    verifyToken()
 
-    useEffect(() => {
-         verifyToken()
-
-     
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-    },[])
 
     return (
         <div 
