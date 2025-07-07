@@ -10,6 +10,7 @@ export const Confirm = () => {
 
     // CAPTUARAR EL TOKEN
     const {token}=useParams() //capturo del token
+    console.log(token)
     const verifyToken= async()=>{
          try {
             const url = `${import.meta.env.VITE_BACKEND_URL}/confirmar/${token}`
