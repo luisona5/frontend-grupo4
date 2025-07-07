@@ -1,4 +1,4 @@
-import { useEffect } from 'react'
+import { useCallback, useEffect } from 'react'
 import confirmacion from '../assets/confirma.jpg'
 import fondo from '../assets/fondoDeporte.jpg'
 import {Link, useParams} from 'react-router-dom'
@@ -11,7 +11,7 @@ export const Confirm = () => {
     // CAPTUARAR EL TOKEN
     const {token}=useParams() //capturo del token
    
-    const verifyToken= async()=>{
+    const verifyToken= useCallback( async()=>{
          try {
             const url = `${import.meta.env.VITE_BACKEND_URL}/confirmar/${token}`
             const respuesta = await axios.get(url)
@@ -19,11 +19,14 @@ export const Confirm = () => {
         } catch (error) {
             toast.error(error?.response?.data?.msg)
         }
-    }
+    },[token])
 
     useEffect(() => {
-        verifyToken()
-    })
+       if (token){
+         verifyToken()
+
+     }
+    },{verifyToken})
 
     return (
         <div 
