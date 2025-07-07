@@ -22,8 +22,8 @@ export const Confirm = () => {
     }
 
     useEffect(() => {
-       if (token) verifyToken()
-    },[token])
+        verifyToken()
+    })
 
     return (
         <div 
