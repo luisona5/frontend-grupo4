@@ -10,7 +10,7 @@ export const Confirm = () => {
 
     // CAPTUARAR EL TOKEN
     const {token}=useParams() //capturo del token
-   
+   console.log("hasta qui estamos bien")
 
     const verifyToken=  async()=>{
          try {
