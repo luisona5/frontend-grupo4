@@ -22,9 +22,9 @@ export const Confirm = () => {
         }
     }
 
+
     useEffect(() => {
          verifyToken()
-
      
     },[])
 
