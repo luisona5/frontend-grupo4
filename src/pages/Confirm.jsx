@@ -10,11 +10,10 @@ export const Confirm = () => {
 
     // CAPTUARAR EL TOKEN
     const {token}=useParams() //capturo del token
-   console.log("hasta qui estamos bien")
 
     const verifyToken=  async()=>{
          try {
-            const url = `${import.meta.env.VITE_BACKEND_URL}/confirmar/${token}`
+            const url = `${import.meta.env.VITE_BACKEND_URL}/confirm/${token}`
             const respuesta = await axios.get(url)
             toast.success(respuesta?.data?.msg)
         } catch (error) {
