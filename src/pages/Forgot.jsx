@@ -1,22 +1,24 @@
 import {Link} from 'react-router'
-import useFetch from '../hooks/useFetch'
-import { useForm } from 'react-hook-form';
-import { ToastContainer} from 'react-toastify'
+import {useForm} from 'react-hook-form'
+import useFetch from '../Hooks/useFetch';
+import { ToastContainer } from 'react-toastify';
+
+
 
 export const Forgot = () => {
+    const {register, handleSubmit,formState: { errors },} = useForm()
+    const{fetchDataBackend}=useFetch()
+    
+    const sendMail=(data)=>{
+        const url=`${import.meta.env.VITE_BACKEND_URL}/recuperarpassword`
+        fetchDataBackend(url,data,'POST')
 
-    const { register, handleSubmit, formState: { errors } } = useForm()
-    const { fetchDataBackend } = useFetch()
+}
 
-    const sendMail = (data) => {
-        const url = `${import.meta.env.VITE_BACKEND_URL}/recuperarpassword`
-        fetchDataBackend(url, data,'POST')
-    }
 
     return (
         <div className="flex flex-col sm:flex-row h-screen">
-
-            <ToastContainer/>   
+            <ToastContainer/> 
 
             <div className="w-full sm:w-1/2 h-screen bg-white flex justify-center items-center">
 
@@ -31,9 +33,10 @@ export const Forgot = () => {
                         <div className="mb-1">
                             <label className="mb-2 block text-sm font-semibold">Correo electrónico</label>
                             <input type="email" placeholder="Ingresa un correo electrónico válido" className="block w-full rounded-md border border-gray-300 focus:border-purple-700 focus:outline-none focus:ring-1 focus:ring-purple-700 py-1 px-1.5 text-gray-500" 
-                            {...register("email", { required: "El correo electrónico es obligatorio" })}
+                            {... register("email",{required:"el correo es obligatorio"})}
+                            
                             />
-                            {errors.email && <p className="text-red-800">{errors.email.message}</p>}
+                            {errors.email && <p className='text-red-800'>{errors.email.message}</p>}
                         </div>
 
                         <div className="mb-3">
@@ -56,7 +59,7 @@ export const Forgot = () => {
 
             </div>
 
-            <div className="w-full sm:w-1/2 h-1/3 sm:h-screen bg-[url('/public/images/catforgot.jpg')] 
+            <div className="w-full sm:w-1/2 h-1/3 sm:h-screen bg-[url('/public/images/futbol.jpg')] 
             bg-no-repeat bg-cover bg-center sm:block hidden
             ">
             </div>
