@@ -27,9 +27,11 @@ const storeProfile = create((set) => ({
                 console.error(error)
             }
         },
+
+
         updateProfile:async(data,id)=>{
             try {
-                const url = `${import.meta.env.VITE_BACKEND_URL}/administrador/${id}`
+                const url = `${import.meta.env.VITE_BACKEND_URL}/Administrador/${id}`
                 const respuesta = await axios.put(url, data,getAuthHeaders())
                 set({ user: respuesta.data })
                 toast.success("Los cambios se han hecho satisfactoriamente")
