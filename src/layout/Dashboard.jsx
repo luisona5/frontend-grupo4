@@ -53,7 +53,7 @@ const Dashboard = () => {
                     </div>
                     <div>
                         {/* es la parte de la foto de la persona de fondo (grande)*/}
-                        <img src="https://cdn-icons-png.flaticon.com/512/4715/4715329.png" alt="img-client" className="border-2 border-green-600 rounded-full" width={50} height={50} />
+                        <img src="https://static.vecteezy.com/system/resources/previews/001/631/580/non_2x/add-photo-icon-with-camera-vector.jpg" alt="img-client" className="border-2 border-green-600 rounded-full" width={50} height={50} />
                     </div>
                     <div>
                         <button className=" text-white mr-3 text-md block hover:bg-red-900 text-center
