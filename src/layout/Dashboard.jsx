@@ -2,11 +2,16 @@ import { Link, Outlet, useLocation } from 'react-router'
 import storeAuth from '../context/storeAuth'
 import storeProfile from '../context/storeProfile'
 
+
 const Dashboard = () => {
     const location = useLocation()
     const urlActual = location.pathname
     const { clearToken } = storeAuth()
     const{user} = storeProfile()
+    
+
+
+
     return (
         
         <div className='md:flex md:min-h-screen'>
@@ -46,6 +51,7 @@ const Dashboard = () => {
                         Usuario - {user?.nombre}
                     </div>
                     <div>
+                        {/* es la parte de la foto de la persona de fondo (grande)*/}
                         <img src="https://cdn-icons-png.flaticon.com/512/4715/4715329.png" alt="img-client" className="border-2 border-green-600 rounded-full" width={50} height={50} />
                     </div>
                     <div>
@@ -59,7 +65,7 @@ const Dashboard = () => {
                     <Outlet />
                 </div>
                 <div className='bg-gray-800 h-12'>
-                    <p className='text-center  text-slate-100 leading-[2.9rem] underline'>Todos los derechos reservados</p>
+                    <p className='text-center  text-slate-100 leading-[2.9rem] underline'>Todos los derechos reservados- copyright</p>
                 </div>
 
             </div>
