@@ -1,7 +1,7 @@
 import { ToastContainer, toast } from 'react-toastify';
 import { useState } from 'react'
 import { useParams,useNavigate } from 'react-router-dom';
-import useFetch from '../hooks/useFetch.js';
+import useFetch from '../hooks/useFetch';
 import { useEffect } from 'react';
 import { useForm } from 'react-hook-form';
 import exito from '../assets/reset.jpg'
