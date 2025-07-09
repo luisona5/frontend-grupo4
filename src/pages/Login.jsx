@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { Link, useNavigate } from 'react-router';
-import useFetch from '../hooks/useFetch.js';
+import useFetch from '../hooks/useFetch';
 import { ToastContainer } from 'react-toastify';
 import storeAuth from '../context/storeAuth';
 
@@ -11,21 +11,17 @@ const Login = () => {
     const [showPassword, setShowPassword] = useState(false);
     const { register, handleSubmit, formState: { errors } } = useForm()
     const { fetchDataBackend } = useFetch()
-
-    //--------------------------llamar
-    const {setToken,setRol}= storeAuth()
+    const { setToken, setRol } = storeAuth()
 
     const loginUser = async(data) => {
         const url = `${import.meta.env.VITE_BACKEND_URL}/login`
-        const response = await fetchDataBackend(url, data,'POST')
+        const response = await fetchDataBackend(url, data,'POST', null)
         setToken(response.token)
         setRol(response.rol)
-
         if(response){
             navigate('/dashboard')
         }
     }
-
     return (
         <div className="flex flex-col sm:flex-row h-screen">
             <ToastContainer />
