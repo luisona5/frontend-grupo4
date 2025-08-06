@@ -52,10 +52,7 @@ const Dashboard = () => {
                     <div className='text-md font-semibold text-slate-100'>
                         Usuario - {user?.nombre}
                     </div>
-                    <div>
-                        {/* es la foto que esta a lado de salir*/}
-                        <img src="https://static.vecteezy.com/system/resources/previews/001/631/580/non_2x/add-photo-icon-with-camera-vector.jpg" alt="img-client" className="border-2 border-green-600 rounded-full" width={50} height={50} />
-                    </div>
+                   
                     <div>
                         <button className=" text-white mr-3 text-md block hover:bg-red-900 text-center
                         bg-red-800 px-4 py-1 rounded-lg"
@@ -67,7 +64,7 @@ const Dashboard = () => {
                     <Outlet />
                 </div>
                 <div className='bg-blue-100 h-12'>
-                    <p className='text-center  text-Gray-100 '><i>Todos los derechos reservados- copyright © </i> </p>
+                    <p className='text-center  text-Gray-100 '><i>Todos los derechos reservados-copyright © </i> </p>
                 </div>
 
             </div>
