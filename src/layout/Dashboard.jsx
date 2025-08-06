@@ -67,7 +67,7 @@ const Dashboard = () => {
                     <Outlet />
                 </div>
                 <div className='bg-blue-100 h-12'>
-                    <p className='text-center  text-Gray-100 '><i>Todos los derechos reservados- copyright</i> </p>
+                    <p className='text-center  text-Gray-100 '><i>Todos los derechos reservados- copyright © </i> </p>
                 </div>
 
             </div>
