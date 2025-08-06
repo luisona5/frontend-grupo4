@@ -16,7 +16,7 @@ const Dashboard = () => {
     return (
         
         <div className='md:flex md:min-h-screen'>
-            <div className='md:w-1/5 bg-gray-800 px-5 py-4'>
+            <div className='md:w-1/5 bg-blue-800 px-5 py-4'>
 
                 <h2 className='text-4xl font-black text-center text-slate-200'>PoliSport</h2>
 
@@ -26,7 +26,7 @@ const Dashboard = () => {
                 <p className='text-slate-400 text-center my-4 text-sm'> Rol - {user?.rol}</p>
                 <hr className="mt-5 border-slate-500" />
 
-                <ul className="mt-5 flex justify-center space-x-4">
+                <ul className="mt-5 flex justify-center space-x-4">{/*con esto es para que los link esta de manera horizontal*/ }
                     <li className="text-center">
                         <Link to='/dashboard' className={`${urlActual === '/dashboard' ? 'text-slate-200 bg-gray-900 px-3 py-2 rounded-md text-center' : 'text-slate-600'} text-xl block mt-2 hover:text-slate-600`}>Perfil</Link>
                     </li>
