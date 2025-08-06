@@ -16,7 +16,7 @@ const Dashboard = () => {
     return (
         
         <div className='md:flex md:min-h-screen'>
-            <div className='md:w-1/5 bg-blue-200 px-5 py-4'> {/*franja de izquierda*/ }
+            <div className='md:w-1/5 bg-blue-100 px-5 py-4'> {/*franja de izquierda*/ }
 
                 <h2 className='text-4xl font-black text-center text-slate-200'>PoliSport</h2>
 
