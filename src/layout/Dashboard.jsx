@@ -1,6 +1,7 @@
 import { Link, Outlet, useLocation } from 'react-router'
 import storeAuth from '../context/storeAuth'
 import storeProfile from '../context/storeProfile'
+import { Icons } from 'react-toastify'
 
 
 
@@ -66,7 +67,7 @@ const Dashboard = () => {
                     <Outlet />
                 </div>
                 <div className='bg-blue-100 h-12'>
-                    <p className='text-center  text-Gray-100 leading-[2.9rem] underline'>Todos los derechos reservados- copyright</p>
+                    <p className='text-center  text-Gray-100 '>Todos los derechos reservados- copyright <Icons>copyright</Icons></p>
                 </div>
 
             </div>
