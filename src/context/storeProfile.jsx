@@ -19,7 +19,7 @@ const storeProfile = create((set) => ({
         clearUser: () => set({ user: null }),
         profile: async () => {
             try {
-                const url = `${import.meta.env.VITE_BACKEND_URL}/perfil`;
+                const url = `${import.meta.env.VITE_BACKEND_URL}/dashboard`;
                 const respuesta = await axios.get(url, getAuthHeaders())
                 set({ user: respuesta.data })
             } catch (error) {
@@ -28,7 +28,7 @@ const storeProfile = create((set) => ({
         },
         updateProfile:async(data,id)=>{
             try {
-                const url = `${import.meta.env.VITE_BACKEND_URL}/administrador/${id}`
+                const url = `${import.meta.env.VITE_BACKEND_URL}/Administrador/${id}`
                 const respuesta = await axios.put(url, data,getAuthHeaders())
                 set({ user: respuesta.data })
                 toast.success("Perfil actualizado correctamente")
