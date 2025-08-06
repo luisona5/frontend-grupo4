@@ -65,7 +65,7 @@ const Dashboard = () => {
                 <div className='overflow-y-scroll p-8'>
                     <Outlet />
                 </div>
-                <div className='bg-gray-800 h-12'>
+                <div className='bg-blue-200 h-12'>
                     <p className='text-center  text-slate-100 leading-[2.9rem] underline'>Todos los derechos reservados- copyright</p>
                 </div>
 
