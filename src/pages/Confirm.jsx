@@ -18,7 +18,7 @@ export const Confirm = () => {
             
             const respuesta = await axios.get(url);
             console.log(respuesta.data.msg)
-            toast.success(respuesta?.data?.msg)
+            toast.success(respuesta?.data?.msg) // ? significa encadenamiento opcional
         } catch (error) {
             console.log(error);
             toast.error(error?.response?.data?.msg)
@@ -38,6 +38,7 @@ export const Confirm = () => {
              style={{  backgroundImage: `linear-gradient(rgba(255, 251, 251, 0.21), rgba(246, 236, 236, 0.86)), url(${fondo})` }}
         >
             <ToastContainer />
+
             <img className="object-cover h-80 w-80 rounded-full border-4 border-solid border-slate-600" src={confirmacion} alt="image description"/>
 
             <div className="flex flex-col items-center justify-center">
@@ -48,3 +49,4 @@ export const Confirm = () => {
         </div>
     )
 }
+ 

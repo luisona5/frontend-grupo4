@@ -9,6 +9,8 @@ const Dashboard = () => {
     const location = useLocation()
     const urlActual = location.pathname
     const { clearToken } = storeAuth()
+    {/*Ahora se procede a trabajar en el componente Dashboard 
+        para poder presentar la información del store.*/}
     const{user} = storeProfile()
     
 

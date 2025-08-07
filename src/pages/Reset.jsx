@@ -14,6 +14,7 @@ const Reset = () => {
     const {token}=  useParams()
     const [tokenback, setTokenBack] = useState(false);
     const {fetchDataBackend}= useFetch()
+
     const {register, handleSubmit,formState:{errors}}=useForm()
     const navigate= useNavigate()
 
@@ -41,7 +42,7 @@ const Reset = () => {
     }
 
     useEffect(() => {
-
+  
       verifyToken()
     }, [])
     
