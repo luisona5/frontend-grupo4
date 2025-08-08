@@ -149,12 +149,12 @@ export const Form = () => {
 
                 {/* Tipo de mascota */}
                 <div>
-                    <label className="mb-2 block text-sm font-semibold">Tipo</label>
+                    <label className="mb-2 block text-sm font-semibold">Disciplina</label>
                     <select
                         id='prioridad'
                         className='block w-full rounded-md border border-gray-300 py-1 px-2 text-gray-500 mb-5'
                     >
-                        <option value="">--- Disciplina ---</option>
+                        <option value="">--- Selecciona ---</option>
                         <option value="Futbol">Futbol</option>
                         <option value="Basquet">Basquet</option>
                         <option value="volleyball">volleyball</option>
@@ -165,7 +165,7 @@ export const Form = () => {
                 <div>
                     <label className="mb-2 block text-sm font-semibold">Carrera</label>
                     <select
-                        id='prioridad'
+                        id='prioridad1'
                         className='block w-full rounded-md border border-gray-300 py-1 px-2 text-gray-500 mb-5'
                     >
                         <option value="">--- Selecciona---</option>
