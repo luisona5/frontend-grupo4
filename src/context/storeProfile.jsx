@@ -13,6 +13,7 @@ const getAuthHeaders = () => {
     };
 };
 
+
 const storeProfile = create((set) => ({
         
         user: null,
@@ -32,6 +33,17 @@ const storeProfile = create((set) => ({
                 const respuesta = await axios.put(url, data,getAuthHeaders())
                 set({ user: respuesta.data })
                 toast.success("Perfil actualizado correctamente")
+            } catch (error) {
+                console.log(error)
+                toast.error(error.response?.data?.msg)
+            }
+        },
+        updatePasswordProfile:async(data,id)=>{
+            try {
+                const url = `${import.meta.env.VITE_BACKEND_URL}/administrador/actualizarpassword/${id}`
+                const respuesta = await axios.put(url, data,getAuthHeaders())
+                toast.success(respuesta?.data?.msg)
+                return respuesta
             } catch (error) {
                 console.log(error)
                 toast.error(error.response?.data?.msg)
