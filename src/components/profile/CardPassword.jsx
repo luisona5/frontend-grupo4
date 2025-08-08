@@ -46,8 +46,8 @@ const CardPassword = () => {
 
                 <input
                     type="submit"
-                    className='bg-green-100 w-full p-2 text-slate-300 uppercase font-bold rounded-lg 
-                        hover:bg-green-600 cursor-pointer transition-all'
+                    className='bg-green-500 w-full p-2 text-slate-300 uppercase font-bold rounded-lg 
+                        hover:bg-green-100 cursor-pointer transition-all'
                     value='Cambiar' />
 
             </form>
