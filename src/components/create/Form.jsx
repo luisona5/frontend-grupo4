@@ -21,7 +21,7 @@ export const Form = () => {
             {/* Información del propietario */}
             <fieldset className="border-2 border-gray-500 p-6 rounded-lg shadow-lg">
                 <legend className="text-xl font-bold text-gray-700 bg-gray-200 px-4 py-1 rounded-md">
-                    Información del Director de Evento
+                    Ingreso de Es
                 </legend>
 
                 {/* Cédula */}
