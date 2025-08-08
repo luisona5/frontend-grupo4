@@ -154,7 +154,7 @@ export const Form = () => {
                         id='prioridad'
                         className='block w-full rounded-md border border-gray-300 py-1 px-2 text-gray-500 mb-5'
                     >
-                        <option value="">--- Seleccionar ---</option>
+                        <option value="">--- Disciplina ---</option>
                         <option value="Futbol">Futbol</option>
                         <option value="Basquet">Basquet</option>
                         <option value="volleyball">volleyball</option>
@@ -163,11 +163,17 @@ export const Form = () => {
 
                 {/* Fecha de nacimiento */}
                 <div>
-                    <label className="mb-2 block text-sm font-semibold">Fecha de nacimiento</label>
-                    <input
-                        type="date"
-                        className="block w-full rounded-md border border-gray-300 py-1 px-2 text-gray-500 mb-5"
-                    />
+                    <label className="mb-2 block text-sm font-semibold">Carrera</label>
+                    <select
+                        id='prioridad'
+                        className='block w-full rounded-md border border-gray-300 py-1 px-2 text-gray-500 mb-5'
+                    >
+                        <option value="">--- Selecciona---</option>
+                        <option value="Electromecanica">Electromecanica</option>
+                        <option value="Agua y Saneamiento Ambiental">Agua y Saneamiento Ambiental</option>
+                        <option value="Desarrollo de Software">Desarrollo de Software</option>
+                        <option value="Redes y Telecomunicaciones">Redes y Telecomunicaciones</option>
+                    </select>
                 </div>
 
                 {/* Síntomas */}
