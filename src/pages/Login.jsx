@@ -11,10 +11,13 @@ const Login = () => {
     const [showPassword, setShowPassword] = useState(false);
     const { register, handleSubmit, formState: { errors } } = useForm()
     const { fetchDataBackend } = useFetch()
+    const { setToken, setRol } = storeAuth()
 
     const loginUser = async(data) => {
         const url = `${import.meta.env.VITE_BACKEND_URL}/login`
-        const response = await fetchDataBackend(url, data,'POST')
+        const response = await fetchDataBackend(url, data,'POST', null)
+        setToken(response.token)
+        setRol(response.rol)
         if(response){
             navigate('/dashboard')
         }
