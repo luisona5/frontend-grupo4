@@ -38,9 +38,12 @@ const storeProfile = create((set) => ({
                 toast.error(error.response?.data?.msg)
             }
         },
+        
+        // actualizar la contraseña
+
         updatePasswordProfile:async(data,id)=>{
             try {
-                const url = `${import.meta.env.VITE_BACKEND_URL}/administrador/actualizarPassword/${id}`
+                const url = `${import.meta.env.VITE_BACKEND_URL}/administrador/actualizarpassword/${id}`
                 const respuesta = await axios.put(url, data,getAuthHeaders())
                 toast.success(respuesta?.data?.msg)
                 return respuesta
@@ -49,6 +52,7 @@ const storeProfile = create((set) => ({
                 toast.error(error.response?.data?.msg)
             }
         }
+
     })
 )
 
