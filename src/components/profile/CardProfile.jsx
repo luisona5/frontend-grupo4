@@ -1,10 +1,9 @@
 import storeProfile from "../../context/storeProfile"
 
 
-
 export const CardProfile = () => {
 
-      const {user} = storeProfile() 
+    const {user} = storeProfile()  
 
     return (
         <div className="bg-white border border-slate-200 h-auto p-4 
