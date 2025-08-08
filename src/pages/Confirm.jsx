@@ -14,13 +14,12 @@ export const Confirm = () => {
     const verifyToken=  async()=>{
          try {
             const url = `${import.meta.env.VITE_BACKEND_URL}/confirmar/${token}`
-            console.log(url);
             
             const respuesta = await axios.get(url);
-            console.log(respuesta.data.msg)
             toast.success(respuesta?.data?.msg) // ? significa encadenamiento opcional
+
+
         } catch (error) {
-            console.log(error);
             toast.error(error?.response?.data?.msg)
         }
     }
