@@ -12,7 +12,6 @@ const CardPassword = () => {
 
     const updatePassword = async (data) => {
         const response = await updatePasswordProfile(data, user._id)
-        console.log(response)
         if(response){
             clearToken()
         }
