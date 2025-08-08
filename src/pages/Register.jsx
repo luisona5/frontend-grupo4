@@ -16,11 +16,12 @@ export const Register = () => {
             const respuesta = await axios.post(url,data)
             toast.success(respuesta.data.msg)
         } catch (error) {
-            toast.error(error?.response?.data?.msg || 'Error al registrar usuario')
+            toast.error(error.response.data.msg)
         }
     }
 
     return (
+
         <div className="flex flex-col sm:flex-row h-screen">
 
             <ToastContainer />
@@ -31,8 +32,8 @@ export const Register = () => {
                 <div className="md:w-4/5 sm:w-full">
                     {/* Contenedor del formulario */}
 
-                    <h1 className="text-3xl font-semibold mb-2 text-center uppercase text-gray-500">Bienvenid(@)</h1>
-                    <small className="text-gray-400 block my-4 text-sm">Por favor ingresa tus datos</small>
+                    <h1 className="text-3xl font-semibold mb-2 text-center uppercase text-gray-500">Bienvenido/a</h1>
+                    <small className="text-gray-400 block my-4 text-sm">Para ingresar completa los campos</small>
 
                     <form onSubmit={handleSubmit(registro)}>
 
